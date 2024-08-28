@@ -34,32 +34,93 @@ const Signup = () => {
   };
 
   return (
-    <div className="p-3 max-w-lg mx-auto">
+    <div className="p-3 max-w-lg mx-auto text-yellow-500">
       <h1 className="text-3xl text-center font-semibold my-7">Sign Up</h1>
-      <form className=" flex flex-col gap-4" onSubmit={handleSubmit}>
-        <input
-          type="text"
-          placeholder="username"
-          className="border p-3 rounded-lg"
-          id="username"
-          onChange={handleChange}
-        ></input>
-        <input
-          type="email"
-          placeholder="email"
-          className="border p-3 rounded-lg"
-          id="email"
-          onChange={handleChange}
-        ></input>
-        <input
-          type="password"
-          placeholder="password"
-          className="border p-3 rounded-lg"
-          id="password"
-          onChange={handleChange}
-        ></input>
+      <form
+        className=" flex flex-col gap-4 p-3 bg-custom-blue rounded-lg"
+        onSubmit={handleSubmit}
+      >
+        <label className="relative w-full my-3">
+          <input
+            type="text"
+            id="username"
+            className="block py-3 text-white w-full text-sm rounded-lg bg-transparent border-b-2 border-yellow-500 
+appearance-none focus:outline-none focus:border-2 focus:border-yellow-500 peer"
+            onChange={handleChange}
+            required
+          />
+          <span
+            className="absolute text-white text-lg duration-300 left-2 top-2 
+    peer-focus:text-sm 
+    peer-focus:-translate-y-5 
+    peer-focus:px-1
+    peer-focus:bg-yellow-500
+    peer-focus:text-custom-blue      
+    peer-valid:text-sm  
+    peer-valid:-translate-y-5
+    peer-valid:px-1            
+    peer-valid:bg-yellow-500
+    peer-valid:text-custom-blue     
+    "
+          >
+            Username
+          </span>
+        </label>
+        <label className="relative w-full my-3">
+          <input
+            type="text"
+            id="email"
+            className="block py-3 text-white w-full text-sm rounded-lg bg-transparent border-b-2 border-yellow-500 
+appearance-none focus:outline-none focus:border-2 focus:border-yellow-500 peer"
+            onChange={handleChange}
+            required
+          />
+          <span
+            className="absolute text-white text-lg duration-300 left-2 top-2 
+    peer-focus:text-sm 
+    peer-focus:-translate-y-5 
+    peer-focus:px-1
+    peer-focus:bg-yellow-500
+    peer-focus:text-custom-blue      
+    peer-valid:text-sm  
+    peer-valid:-translate-y-5
+    peer-valid:px-1            
+    peer-valid:bg-yellow-500
+    peer-valid:text-custom-blue     
+    "
+          >
+            Email
+          </span>
+        </label>
+        <label className="relative w-full my-3">
+          <input
+            type="password"
+            id="password"
+            className="block py-3 text-white w-full text-sm rounded-lg bg-transparent border-b-2 border-yellow-500 
+appearance-none focus:outline-none focus:border-2 focus:border-yellow-500 peer"
+            onChange={handleChange}
+            required
+          />
+          <span
+            className="absolute text-white text-lg duration-300 left-2 top-2 
+    peer-focus:text-sm 
+    peer-focus:-translate-y-5 
+    peer-focus:px-1
+    peer-focus:bg-yellow-500
+    peer-focus:text-custom-blue      
+    peer-valid:text-sm  
+    peer-valid:-translate-y-5
+    peer-valid:px-1            
+    peer-valid:bg-yellow-500
+    peer-valid:text-custom-blue     
+    "
+          >
+            Password
+          </span>
+        </label>
+
         <button
-          className="bg-slate-700 text-white p-3 rounded-lg uppercase hover:opacity-[95%] disabled:[80%]"
+          className=" text-yellow-500 border border-yellow-500  p-3 rounded-lg uppercase hover:opacity-[95%] disabled:[80%]"
           disabled={loading}
         >
           {loading ? "Loading..." : "Sign Up"}
@@ -68,7 +129,7 @@ const Signup = () => {
       <div className="flex gap-2 mt-5">
         {" "}
         <p>Have an account?</p>
-        <Link to="/sign-in" className="text-blue-700">
+        <Link to="/sign-in" className="text-yellow-500 hover:underline">
           Sign In
         </Link>
       </div>
